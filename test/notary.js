@@ -31,6 +31,6 @@ contract('Notary',()=>{
       const notary=await Notary.deployed();
       const hash=await notary.getFileHash(hexFile);
       const fileExists=await notary.fileExists(hash);
-      assert(typeof fileExists,typeof fileExists,'does not return a boolean true or false');
+      assert(fileExists,false);
      })
 })

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link,useHistory} from 'react-router-dom';
+import {Link,useHistory,NavLink} from 'react-router-dom';
 const Header=()=>{
     const location=useHistory();
     return(
@@ -10,12 +10,13 @@ const Header=()=>{
         </div>
          <nav>
         <ul>
-          <li onClick={()=>{location.push('/')}}>Home</li>
-          <li onClick={()=>{location.push('/document/hash')}}>Create hash</li>
-          <li onClick={()=>{location.push('/document/notorize')}}>Notorize</li>
-          <li onClick={()=>{location.push('/document/verify')}}>Verify</li>
+          <li><NavLink exact to="/" activeClassName="active-link" className="link">Home</NavLink></li>
+          <li><NavLink exact to="/document/hash" activeClassName="active-link" className="link">Create hash</NavLink></li>
+          <li><NavLink exact to="/document/notorize" activeClassName="active-link" className="link">Notorize</NavLink></li>
+          <li><NavLink exact to="/document/verify" activeClassName="active-link" className="link">Verify</NavLink></li>
         </ul>
        </nav>
+       <button className="connect-to-metamask-button">Connect To Wallet</button>
        </header>
     )
 }

@@ -7,8 +7,8 @@ const Declaimer=()=>
         <section className="declaimer"> 
          <h3><u>Declaimer</u></h3>
         
-        <p>Notorizing your document  proves that a document or its content belongs to you,
-            the time it was notarized and the original Owner of the document
+        <p>Notorizing your document  proves ownership of that document in the future,including important information
+           including time it was notarized...
 
         </p>
         <p>

@@ -9,32 +9,36 @@ import Verify from './components/verify/verify';
 import NotFound from './components/notfound';
 import Web3Context from './web3Context';
 import getNotaryContract from './getNotaryContract';
+import Nav from './components/nav';
 import './App.css';
 
 
 const App=()=>{
-  const [web3,setWeb3]=useState(null);
-  const [accounts,setAccounts]=useState(null);
+  const [web3,setWeb3]=useState(undefined);
+  const [accounts,setAccounts]=useState([]);
   const [notaryContract,setNotaryContract]=useState(null);
-
+  const [balance,setBalance]=useState(null);
   useEffect(()=>{
    (async function(){
-    const web3=await getWeb3();
-    const accounts=await web3.eth.getAccounts();
-    const networkId = await web3.eth.net.getId();
-    const notaryContract=getNotaryContract(web3,networkId);
-    setWeb3(web3);
-    setAccounts(accounts);
-    setNotaryContract(notaryContract);
- 
+    // const web3=await getWeb3();
+    // const accounts=await web3.eth.getAccounts();
+    // const balance=await web3.eth.getBalance(accounts[0]);
+    // const networkId = await web3.eth.net.getId();
+    // const notaryContract=getNotaryContract(web3,networkId);
+    // setWeb3(web3);
+    // setAccounts(accounts);
+    // setNotaryContract(notaryContract);
+    // setBalance(web3.utils.fromWei(balance,'ether'));
+    // console.log(web3);
    })()
   },[])
 
   
   return(
-    <Web3Context.Provider value={{web3,accounts,notaryContract}}>
+    <Web3Context.Provider value={{web3,setWeb3,accounts,setAccounts,notaryContract,setNotaryContract,balance,setBalance}}>
     <div>
      <Header/>
+     {/* <Nav/> */}
      <div className="content"> 
      <Switch>
         <Route exact path="/" component={Home}/>

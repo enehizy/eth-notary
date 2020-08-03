@@ -5,7 +5,7 @@ const Home=()=>{
     return(
         <>
         <Services/>
-        <Declaimer/>
+        {/* <Declaimer/> */}
         </>
     )
 }
