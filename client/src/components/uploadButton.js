@@ -10,11 +10,13 @@ function getFile(e,setFile){
 
 export default function UploadButton(){
    const [file,setFile]=useState('');
-   
+   const [defualt,setDefault]=useState('No file chosen');
+
+  
  
     return(
           <div className="flex-center upload-button-container">
-              
+                 <h4>{file == ''?defualt:'Selected File: ' +file.slice(12)}</h4>
                 <label className="select-file" htmlFor="upload" >Click to select a file,Your files content will not be uploaded or seen by us</label >
                
 

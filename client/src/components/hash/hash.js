@@ -3,7 +3,7 @@ import UploadButton from '.././uploadButton';
 import Web3Context from '../../web3Context';
 import HashDoc from './hashDoc';
 const Hash=()=>{
-  const {web3,accounts,notaryContract}=useContext(Web3Context);
+ 
 
     return(
         <div className="hash document">

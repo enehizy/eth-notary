@@ -1,7 +1,19 @@
-import React from 'react';
+import React,{useContext} from 'react';
+import {WalletContext} from '../store/WalletProvider';
+import connectToWallet from '../connectToWeb3';
 import {Link,useHistory,NavLink} from 'react-router-dom';
+
+function ConnectToWallet({dispatch}){
+ 
+  return(
+    <button className="connect-to-metamask-top" onClick={async()=>{
+      connectToWallet(dispatch);
+   }}>Connect To Wallet</button>
+  )
+}
 const Header=()=>{
     const location=useHistory();
+    const {selectedAccount,dispatch} =useContext(WalletContext);
     return(
         <header>
         <div>
@@ -16,7 +28,9 @@ const Header=()=>{
           <li><NavLink exact to="/document/verify" activeClassName="active-link" className="link">Verify</NavLink></li>
         </ul>
        </nav>
-       <button className="connect-to-metamask-button">Connect To Wallet</button>
+     
+       {window.ethereum?window.ethereum.isConnected() &&selectedAccount?<p className="address">{selectedAccount?selectedAccount.substring(0,10) + ' ...':'loading acoounts..'}</p>:<ConnectToWallet dispatch={dispatch}/>:<ConnectToWallet dispatch={dispatch}/>}
+
        </header>
     )
 }

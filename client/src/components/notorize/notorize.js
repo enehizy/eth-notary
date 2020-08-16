@@ -4,7 +4,7 @@ import UploadButton from '.././uploadButton';
 import NotorizeDoc from './notorizeDoc';
 
 const Notorize=()=>{
-     const {web3,accounts,notaryContract}=useContext(Web3Context);
+    
      const [desc,setDesc]=useState('');
 
     

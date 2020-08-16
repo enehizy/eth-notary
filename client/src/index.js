@@ -4,13 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router} from 'react-router-dom';
-
+import WalletProvider from './store/WalletProvider';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-   
-        <App />
+       <WalletProvider>
+         <App />
+       </WalletProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

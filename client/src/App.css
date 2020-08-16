@@ -47,6 +47,11 @@ button{
   padding-left:20px;
   padding-right:20px;
   cursor:pointer;
+  border-radius:2rem;
+}
+button:hover{
+  background:rgb(173, 54, 11);
+  color:white;
 }
 .services{
   display:flex;
@@ -78,21 +83,34 @@ margin-top:20px;
   width: 200px;
   height:150px;
 }
-.connect-to-metamask-button{
-  background:white;
-  border:1px solid white;
-  color:rgb(173, 54, 11);
+.connect-to-metamask-top{
+  background:#B0DBCB;
+  border:1px solid #B0DBCB;
+  color:white;
  font-size:15px;
  font-style: bold;
- 
+}
+.address{
+  background:white;
+  border:1px solid white;
+  padding:10px;
+  border-radius:2rem;
+  color:rgb(173, 54, 11);
+}
+.connect-to-metamask-bottom{
+  background:rgb(58, 133, 126);
+  border:1px solid rgb(58, 133, 126);
+  color:white;
+  font-size:15px;
+  font-style:bold;
 }
 .document{
   display:flex;
   justify-content: center;
-  padding-top:30px;
+  padding-top:5px;
 }
 form > *{
-  margin-top:20px;
+  margin-top:10px;
   width:700px;
   max-width:80%;
 }
@@ -111,6 +129,8 @@ form input{
   background:#f8f8f8;
   color:#444;
  cursor:pointer;
+ font-style:bold;
+ font-weight:20px;
 }
 .button-flex-end{
   display:flex;
@@ -128,4 +148,35 @@ form input{
 .link,.link:active,.link:visited{
   text-decoration: none;
   color:white;
+}
+.notfound{
+  display:flex;
+  flex-direction:colomn;
+
+}
+.upload-button-container h4{
+color:rgb(173, 54, 11);
+padding:10px;
+text-align:center;
+}
+footer{
+  /* background:#B0DBCB; */
+  background:white;
+  border-top:4px solid #eee;
+  padding:15px;
+  position:fixed;
+  width:100%;
+  bottom:0px;
+  color:rgb(173, 54, 11);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+footer > *{
+  margin-left:20px;
+}
+footer a{
+  color:black;
+  border-bottom:2px solid black;
 }
