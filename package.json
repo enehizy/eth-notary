@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/enehizy/eth-notary#readme",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^1.0.36"
+    "@truffle/hdwallet-provider": "^1.7.0"
   }
 }
